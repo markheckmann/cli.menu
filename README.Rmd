@@ -1,0 +1,41 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# cli.menu
+
+<!-- badges: start -->
+`r badger::badge_devel("markheckmann/cli.menu", "blue")`
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+<!-- badges: end -->
+
+A command line interface multi select input dialog. Similar to `utils::menu()` but allowing multi select.
+
+## Installation
+
+You can install the development version of menu like so:
+
+```r
+remotes::install_github("markheckmann/cli.menu")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example, eval=FALSE}
+library(cli.menu)
+x <- c("One", "Two", "Three")
+cli_menu(x)
+```

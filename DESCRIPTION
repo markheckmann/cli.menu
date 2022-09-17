@@ -1,0 +1,18 @@
+Package: cli.menu
+Type: Package
+Title: A multi-select commmand line menu
+Version: 0.1.0
+Authors@R: person("Mark", "Heckmann", email = "heckmann.mark@gmail.com", role = c("aut", "cre"))
+Description: A simple command line menu with more than one options to select.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.1
+Imports: 
+    badger (>= 0.2.1),
+    cli,
+    rlang,
+    stringr
+Remotes:  
+    GuangchuangYu/badger
