@@ -3,27 +3,27 @@
 #' Interactive multi-select menu for command line
 #'
 #' @param choices A vector with items to choose from.
-#'
+#' @param prompt_1,prompt_2 User prompts before and after selection list.
 #' @export
 #' @examples
 #' if (interactive()) {
 #'   x <- c("One", "Two", "Three")
 #'   cli_menu(x)
 #' }
-cli_menu <- function(choices, prompt = "Your selection > ", all_opt = FALSE, none_opt = FALSE) {
+cli_menu <- function(choices, prompt_1 = "Please select from list:", prompt_2 = "Your selection > ", all_opt = FALSE, none_opt = FALSE) {
   if (!rlang::is_interactive()) {
     cli_abort("User input required, but session is not interactive.")
   }
 
   cli({
-    cli_text("Please select from list:")
+    cli_text(prompt_1)
     cli_text("")
     cli_ol(choices)
     cli_text("")
     cli_alert_info("Enter as single integers (e.g. \033[34m3,4,5\033[39m), or range (e.g. \033[34m3-5\033[39m) or combination of both.")
   })
 
-  n <- readline(prompt = prompt)
+  n <- readline(prompt = prompt_2)
   nc <- length(choices)
   # repeat {
   ind <- collect_integers(n)
