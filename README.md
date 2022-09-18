@@ -8,6 +8,8 @@
 [![](https://img.shields.io/badge/devel%20version-0.1.0-blue.svg)](https://github.com/markheckmann/cli.menu)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![Codecov test
+coverage](https://codecov.io/gh/markheckmann/cli.menu/branch/main/graph/badge.svg)](https://app.codecov.io/gh/markheckmann/cli.menu?branch=main)
 <!-- badges: end -->
 
 A command line interface multi select input dialog. Similar to
