@@ -6,13 +6,18 @@
 \usage{
 cli_menu(
   choices,
-  prompt = "Your selection > ",
+  prompt_1 = "Please select from list:",
+  prompt_2 = "Your selection > ",
   all_opt = FALSE,
   none_opt = FALSE
 )
 }
 \arguments{
 \item{choices}{A vector with items to choose from.}
+
+\item{prompt_1, prompt_2}{User prompts before and after selection list.}
+
+\item{all_opt, none_opt}{Not yet implemented.}
 }
 \description{
 Interactive multi-select menu for command line

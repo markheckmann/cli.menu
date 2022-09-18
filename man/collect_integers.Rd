@@ -14,6 +14,7 @@ Parses a string and extracts all integers including range-like expressions. Inte
 any character. Integers seperated by \code{-} or \code{:} are interpreted as a range.
 }
 \examples{
+
 # single integers
 x <- "1 2 3"
 collect_integers(x)

@@ -4,6 +4,7 @@
 #'
 #' @param choices A vector with items to choose from.
 #' @param prompt_1,prompt_2 User prompts before and after selection list.
+#' @param all_opt,none_opt Not yet implemented.
 #' @export
 #' @examples
 #' if (interactive()) {
@@ -41,7 +42,7 @@ cli_menu <- function(choices, prompt_1 = "Please select from list:", prompt_2 = 
 #' @keywords internal
 #'
 get_ranges <- function(x) {
-  stringr::str_extract_all(x, "[0-9]+ *(-|:) *[0-9]+") %>%
+  stringr::str_extract_all(x, "[0-9]+ *(-|:) *[0-9]+") |>
     unlist()
 }
 
@@ -52,9 +53,9 @@ get_ranges <- function(x) {
 #' @keywords internal
 #'
 range_to_numeric_vector <- function(x) {
-  x %>%
-    stringr::str_replace("-", ":") %>%
-    rlang::parse_expr() %>%
+  x |>
+    stringr::str_replace("-", ":") |>
+    rlang::parse_expr() |>
     base::eval()
 }
 
@@ -72,9 +73,9 @@ remove_ranges <- function(x) {
 
 
 get_integers <- function(x) {
-  str_extract_all(x, "[0-9]+") %>%
-    unlist() %>%
-    as.numeric() %>%
+  str_extract_all(x, "[0-9]+") |>
+    unlist() |>
+    as.numeric() |>
     as.list()
 }
 
@@ -124,8 +125,8 @@ collect_integers <- function(x) {
   x_no_ranges <- remove_ranges(x)
   integers_list <- get_integers(x_no_ranges)
   ii <- unlist(c(ranges_list, integers_list))
-  ii %>%
-    unique() %>%
+  ii |>
+    unique() |>
     sort()
 }
 
