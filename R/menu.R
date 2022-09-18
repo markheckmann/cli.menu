@@ -86,7 +86,9 @@ get_integers <- function(x) {
 #'
 #' @param x A string.
 #' @keywords internal
+#' @export
 #' @examples
+#'
 #' # single integers
 #' x <- "1 2 3"
 #' collect_integers(x)

@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 `r badger::badge_devel("markheckmann/cli.menu", "blue")`
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![Codecov test coverage](https://codecov.io/gh/markheckmann/cli.menu/branch/main/graph/badge.svg)](https://app.codecov.io/gh/markheckmann/cli.menu?branch=main)
 <!-- badges: end -->
 
 A command line interface multi select input dialog. Similar to `utils::menu()` but allowing multi select.
